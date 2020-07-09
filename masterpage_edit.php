@@ -4,17 +4,11 @@
 // exit();
 
 // 関数ファイルの読み込み
-include('functions.php');
+include("functions.php");
 session_start();
 check_session_id();
-// idの受け取り
-$id = $_SESSION["id"];
-$username = $_SESSION["username"];
-$name = $_SESSION["name"];
-$email = $_SESSION["email"];
+$id = $_GET["id"];
 
-
-// DB接続
 $pdo = connect_to_db();
 
 // データ取得SQL作成
@@ -24,7 +18,6 @@ $sql = 'SELECT * FROM member WHERE id=:id';
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
-
 
 // データ登録処理後
 if ($status == false) {
@@ -46,37 +39,30 @@ if ($status == false) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <style>
-
-    </style>
+    <title>Master Page</title>
 </head>
 
-
 <body>
-    <div class="edit">
-        <form action="update.php" method="POST">
-
-
-            <a href="member_read.php">Go back to the last page</a>
+    <form action="masterpage_update.php" method="POST">
+        <fieldset>
+            <legend>Master Page</legend>
+            <a href="masterpage.php">一覧画面</a>
             <div>
-                Username: <input type="name" name="username" value="<?= $username ?>">
+                username: <input type="name" name="username" value="<?= $record["username"] ?>">
             </div>
             <div>
-                Name: <input type="name" name="name" value="<?=$name ?>">
+                name: <input type="name" name="name" value="<?= $record["name"] ?>">
             </div>
             <div>
-
-                Email: <input type="email" name="email" value="<?= $email ?>">
-
+                email: <input type="email" name="email" value="<?= $record["email"] ?>">
             </div>
             <div>
                 <button>submit</button>
             </div>
-            <input type="hidden" name='id' value="<?= $id?>">
+            <input type="hidden" name="id" value="<?= $record["id"] ?>">
+        </fieldset>
+    </form>
 
-        </form>
-    </div>
 </body>
 
 </html>

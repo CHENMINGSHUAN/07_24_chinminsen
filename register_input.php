@@ -30,10 +30,10 @@
 
 
     <div class="con">
-        <h1>Start to write your Guide Book</h1>
+        <h1>Get Started</h1>
         <p>Create an account.</p>
 
-        <form action="register.create.php" method="POST">
+        <form action="register_create.php" method="POST">
             <label for="name">Username</label><br>
             <input type="name" name="username" /><br>
             <label for="name">Name</label><br>

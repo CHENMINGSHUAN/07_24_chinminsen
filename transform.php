@@ -1,5 +1,26 @@
 <?php
+// include('functions.php');
+// session_start();
+// check_session_id();
+// $pdo = connect_to_db();
+// $output = "";
+// $admin = $_SESSION["is_admin"];
+// var_dump($admin);
+// die();
+// if ($admin == "1"|| $admin == "2") {
+//     $output .= "<div class='dropdown' id='divId'>";
+//     $output .= "<button class='dropbtn'> Member Area</button>";
+//     $output .= "<div class='dropdown-content'>";
+//     $output .= "<a href=''>Profile</a>";
+//     $output .= "<a href='member_read.php'>Settings</a>";
+//     $output .= "<form action='logout_create.php' method='post'>";
+//     $output .= "<a href='../07_24_chinminsen/logout_create.php'>Log out</a>";
+//     $output .= "</form>";
+//     $output .= "</div>";
+//     $output .= "</div>";
+// }else {
 
+// };
 
 ?>
 <!DOCTYPE html>
@@ -9,7 +30,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href=".../07_24_CHINMINSEN/guidebook.css">
     <style>
         .modal {
             position: fixed;
@@ -73,18 +94,34 @@
 
         .a a {
             text-decoration: none;
-            background-color: coral;
+            border: dimgray 1px solid;
             padding: 15px;
             cursor: pointer;
             border-radius: 0.25rem;
-            color: cornsilk;
-            opacity: 0.8;
-            font-size: 18px;
+
+            color: black;
+            font-size: 22px;
             margin-top: 15px;
         }
 
         .a {
             margin-top: 15px;
+        }
+
+        .abc a {
+            text-decoration: none;
+            border: dimgray 1px solid;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 0.25rem;
+
+            color: black;
+            font-size: 22px;
+            margin-top: 5px;
+        }
+
+        .a:hover {
+            opacity: 0.8;
         }
 
         .fukuoka {
@@ -122,15 +159,12 @@
         }
 
         .trigger {
-            width: 80px;
-            height: 30px;
-            background-color: dimgray;
-            color: floralwhite;
+            border: dimgray 1px solid;
+
             border-radius: 0.25rem;
             cursor: pointer;
-            opacity: 0.6;
             margin-right: 10px;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .dropbtn {
@@ -144,10 +178,14 @@
             cursor: pointer;
         }
 
+        /* #divId {
+            visibility: hidden;
+        } */
+
         .dropdown {
             position: relative;
             display: inline-block;
-            /* visibility: hidden; */
+
         }
 
         .dropdown-content {
@@ -155,7 +193,7 @@
             position: absolute;
             background-color: #f9f9f9;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
         }
 
         .dropdown-content a {
@@ -166,7 +204,7 @@
         }
 
         .dropdown-content a:hover {
-            background-color: #f1f1f1
+            background-color: #f1f1f1;
         }
 
         .dropdown:hover .dropdown-content {
@@ -174,7 +212,8 @@
         }
 
         .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
+            background-color: black;
+            color: linen;
         }
     </style>
 
@@ -189,7 +228,7 @@
                 <span class="button_c">X</span>
                 <div class="con">
 
-                    <form action="login.create.php" method="POST">
+                    <form action="login_create.php" method="POST">
                         <h1 class="title">log In</h1>
                         <label for="email2">Username</label><br>
                         <input type="name" id="username" name="username" /><br>
@@ -203,19 +242,22 @@
                 </form>
             </div>
         </div>
+        <div class="abc">
+            <a href="register_input.php">Register</a>
+        </div>
         <div class="member">
 
-            <div class="dropdown">
+            <!-- <div class="dropdown" id="divId">
                 <button class="dropbtn"> Member Area</button>
                 <div class="dropdown-content">
                     <a href="#">Profile</a>
-                    <a href="member.read.php">Settings</a>
-                    <form action="logout.create.php" method="post">
-                        <a href="../07_24_chinminsen/logout.create.php"  >Log out</a>
+                    <a href="member_read.php">Settings</a>
+                    <form action="logout_create.php" method="post">
+                        <a href="../07_24_chinminsen/logout_create.php">Log out</a>
                     </form>
                 </div>
-            </div>
-
+            </div> -->
+            <!-- <?= $output ?> -->
 
     </header>
 
@@ -238,11 +280,11 @@
 
 
                 </ul>
-    </div>
-
-            <div class="a">
-                <a href="register.input.php">Start to write your Guide Book</a>
             </div>
+
+            <!-- <div class="a">
+                <a href="register_input.php">Start to Write Your Giude Book.</a>
+            </div> -->
         </div>
     </div>
     <footer>
@@ -267,9 +309,13 @@
             }
         }
 
+
+
         trigger.addEventListener("click", toggleModal);
         button_c.addEventListener("click", toggleModal);
         window.addEventListener("click", windowOnClick);
+
+
 
 
 

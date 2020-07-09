@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2020-07-02 15:51:36
+-- 生成日時: 2020-07-09 15:56:29
 -- サーバのバージョン： 10.4.11-MariaDB
 -- PHP のバージョン: 7.4.6
 
@@ -29,11 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `member` (
   `id` int(3) NOT NULL,
-  `username` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `assertpassword` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `is_admin` int(1) NOT NULL,
+  `is_deleted` int(1) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -42,12 +44,11 @@ CREATE TABLE `member` (
 -- テーブルのデータのダンプ `member`
 --
 
-INSERT INTO `member` (`id`, `username`, `name`, `email`, `password`, `assertpassword`, `created_at`, `updated_at`) VALUES
-(1, '', 'muroo', 'muro331@gmail.com', '0', '', '2020-06-30 11:37:04', '2020-06-30 11:37:04'),
-(2, '', 'muroo', 'muro331@gmail.com', '0', '', '2020-06-30 11:37:23', '2020-06-30 11:37:23'),
-(3, 'muro331', '陳明瑄', 'muro331@gmail.com', 'mush3131', 'mush3131', '2020-07-01 14:54:10', '2020-07-01 14:54:10'),
-(4, 'muro331', 'チンミンセ', 'murooo331@outlook.co', '12345678', '', '2020-07-02 10:11:03', '2020-07-02 10:11:03'),
-(5, 'muro331', '1234', 'muro331@gmail.com', 'mush3131', '', '2020-07-02 15:59:48', '2020-07-02 15:59:48');
+INSERT INTO `member` (`id`, `username`, `name`, `email`, `password`, `assertpassword`, `is_admin`, `is_deleted`, `created_at`, `updated_at`) VALUES
+(11, 'muro331331', '陳明瑄', 'muro331@gmail.com', 'mush3131', '', 0, 0, '2020-07-08 10:22:51', '2020-07-09 20:42:16'),
+(12, 'muro331331', '陳明瑄', 'murooo331@outlook.co', '1234567', '0', 0, 0, '2020-07-08 20:11:55', '2020-07-08 20:11:55'),
+(14, 'muro332331', '陳明瑄', 'muro331@gmail.com', 'mush3131', '0', 0, 0, '2020-07-09 16:25:25', '2020-07-09 22:48:00'),
+(15, 'muro331', '陳明瑄', 'muro331@gmail.com', 'mush3131', '0', 0, 0, '2020-07-09 20:43:42', '2020-07-09 20:43:42');
 
 --
 -- ダンプしたテーブルのインデックス
@@ -67,7 +68,7 @@ ALTER TABLE `member`
 -- テーブルのAUTO_INCREMENT `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
