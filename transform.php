@@ -276,7 +276,7 @@
         <div class="fukuoka">
             <div>
                 <ul class="slide">
-                    <li><img src="../07_24_chinminsen/img/20191011_164711.jpg" width="650px" height="420px"></li>
+                    <li><img src="../08_24_chinminsen/img/20191011_164711.jpg" width="650px" height="420px"></li>
 
 
                 </ul>

@@ -145,7 +145,7 @@
                     <a href="#">Profile</a>
                     <a href="member_read.php">Settings</a>
                     <form action="logout_create.php" method="post">
-                        <a href="../07_24_chinminsen/logout_create.php">Log out</a>
+                        <a href="../08_24_chinminsen/logout_create.php">Log out</a>
                     </form>
                 </div>
             </div>
@@ -168,7 +168,7 @@
         </header>
         <ul>
 
-            <li><img src="../07_24_chinminsen/img/20191011_164711.jpg" id="img1" width="650px" height="420px"></li>
+            <li><img src="../08_24_chinminsen/img/20191011_164711.jpg" id="img1" width="650px" height="420px"></li>
             </li>
             <!-- <li> <img src="../07_24_chinminsen/img/20200312_150721.jpg" id="img2" style="display: none;" alt="" width="650px" height="420px">
             </li> -->
