@@ -1,0 +1,49 @@
+1.ファイルについて
+transform.php      ---共通トップページ（非ログイン時も閲覧可能）
+memberhomepage.php  ---ユーザーのトップページ
+
+login_create.php  ---ログイン処理するページ
+register_input.php   ---会員登録ページ
+register_create.php   ---会員登録処理ページ
+
+
+
+2．管理者
+管理者：username：muro331、password：mush3131
+masterpage.php   ---管理者ページ
+masterpage_edit.php ---管理者編集ページ
+masterpage_update.php   ---管理者アップロードページ
+masterpage_delete.php   ---管理者削除処理するページ
+
+
+
+3．右上のmember  area
+profile今ないです。
+member_read.php       ---settingの中、読むページ
+edit.php   --settingの中、ユーザー資料編集するページ
+update.php  --settingの中、ユーザー資料更新するページ
+myguidebook.php  ---マイ投稿読むページ
+myguidebook_edit.php    ---投稿を編集するページ
+myguidebook_update.php  ---投稿を更新するページ
+logout_create.php     ---ログアウトページ
+
+
+4．guidebook
+guidebook.php   ---投稿読むページ（トップページ、五つ選択肢の中のThe Guide Book、loginしたら見えます）
+guidebook_input.php ---投稿ページ（トップページ下のWrite Your Guide Book）
+guidebook_create.php    ---投稿処理ページ
+like_create.php      ---like create
+success.php      ---投稿成功ページ
+
+5．他
+img/        ----トップページのimg
+functions.php  ----共通処理のphp格納先
+upload/    ----投稿画像ファイル格納先
+
+
+6．SQLデータ
+07_24.sql ----sqlファイル
+＊table
+① member    ----登録
+② guidebook ----4のguidebook
+③ like_table    ----４のlike_create

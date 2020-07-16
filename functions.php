@@ -11,9 +11,19 @@ function check_session_id()
     } else {
         session_regenerate_id(true);
         $_SESSION["session_id"] = session_id();
+        
+        // $username_header = htmlspecialchars($username, \ENT_QUOTES, 'UTF-8');
+        // $link_header = '<a href="logout_create.php">Log out</a>';
     }
 }
 
+function insert($sql, $arr = [])
+{
+    $pdo = connect_to_db();
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($arr);
+    return $pdo->lastInsertId(); //最終行のIDを取得
+}
 
 function connect_to_db()
 {

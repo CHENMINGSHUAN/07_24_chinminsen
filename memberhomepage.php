@@ -144,6 +144,7 @@
                 <div class="dropdown-content">
                     <a href="#">Profile</a>
                     <a href="member_read.php">Settings</a>
+                    <a href="myguidebook.php">My Guidebook</a>
                     <form action="logout_create.php" method="post">
                         <a href="../08_24_chinminsen/logout_create.php">Log out</a>
                     </form>
@@ -162,7 +163,7 @@
                 <li><a href="">News</a> </li>
                 <li><a href="">Local</a></li>
                 <li><a href="">Information</a></li>
-                <li><a href="">The Guide Book</a></li>
+                <li><a href="guidebook.php">The Guide Book</a></li>
             </ul>
         </div>
         </header>
@@ -175,7 +176,7 @@
         </ul>
 
         <div class="a">
-            <a href="#" style="display: none;" id="a">Start to Write Your Giude Book.</a>
+            <a href="guidebook_input.php" style="display: none;" id="a">Start to Write Your Giude Book.</a>
         </div>
 
 
